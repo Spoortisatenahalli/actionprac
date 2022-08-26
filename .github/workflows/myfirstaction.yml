@@ -35,6 +35,7 @@ jobs:
       
       - name: Run a multi-line script
         run: |
+           echo ${{ secrets.File }}
        
           echo test, and deploy your project.
 
