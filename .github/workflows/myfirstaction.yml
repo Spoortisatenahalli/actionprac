@@ -29,12 +29,12 @@ jobs:
 
       
       - name: Run a one-line script
-        run: echo Hello, world please welcome spoorti!
+        run: echo  $Message
 
       
       - name: Run a multi-line script
         run: |
-          echo ${{ secrets.SuperSecret }}
+          echo ${{ secrets.File }}
           echo test, and deploy your project.
 
   job1:
