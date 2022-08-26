@@ -3,7 +3,8 @@
 name: Spoorti CI Flow
 
 env:
-  Message: "Its Thursday!!"
+  # Message: "Its Thursday!!"
+  Message:${{secrets.Supersecret}}
 
 # Controls when the workflow will run
 on:
@@ -29,12 +30,12 @@ jobs:
 
       
       - name: Run a one-line script
-        run: echo  $Message
+        run: echo  Hey its me "$Message"
 
       
       - name: Run a multi-line script
         run: |
-          echo ${{ secrets.File }}
+       
           echo test, and deploy your project.
 
   job1:
